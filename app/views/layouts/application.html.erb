@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Learn</title>
+    <title><%= full_title(yield(:title)) %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <%# <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script> %>
     <%# <script src="https://cdn.tailwindcss.com"></script> %>
-    <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'application', media: 'all',
+                                           'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shim' %>
+  </head>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
 </html>
