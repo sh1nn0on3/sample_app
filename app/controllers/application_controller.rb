@@ -1,14 +1,7 @@
-class StaticPagesController < ApplicationController
-    def home
-    end
-  
-    def help
-    end
-  
-    def about
-    end
-    
-    def contact
+class ApplicationController < ActionController::Base
+
+    def hello
+      render html: "hello, world!"
     end
   end
   
