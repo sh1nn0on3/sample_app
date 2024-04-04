@@ -4,6 +4,7 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
@@ -101,16 +102,35 @@ footer {
     }
   }
 }
+@media (max-width: 800px) {
+  footer {
+    small {
+      display: block;
+      float: none;
+      margin-bottom: 1em;
+    }
+    ul {
+      float: none;
+      padding: 0;
+      li {
+        float: none;
+        margin-left: 0;
+      }
+    }
+  }
+}
 
-
+/* miscellaneous */
 
 .debug_dump {
   clear: both;
   float: left;
   width: 100%;
   margin-top: 45px;
+  @include box_sizing;
 }
 
+/* sidebar */
 
 aside {
   section.user_info {
@@ -173,4 +193,10 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+/* Dropdown menu */
+
+.dropdown-menu.active {
+  display: block;
 }
