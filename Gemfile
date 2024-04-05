@@ -15,9 +15,9 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 gem 'sass-rails','6.0.0'
 gem 'bootstrap-sass', '3.4.1'
+gem 'htmlbeautifier'
 gem 'guard','2.16.2'
 gem 'guard-minitest', '2.4.6'
-gem 'htmlbeautifier'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
