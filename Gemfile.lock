@@ -286,6 +286,7 @@ DEPENDENCIES
   sass-rails (= 6.0.0)
   sassc
   selenium-webdriver
+  rails-i18n
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails

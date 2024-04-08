@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by(id: params[:id])
   end
 
   def new
@@ -75,3 +75,4 @@ class UsersController < ApplicationController
       redirect_to(root_url, status: :see_other) unless current_user.admin?
     end
 end
+
