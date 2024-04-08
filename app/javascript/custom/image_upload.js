@@ -6,5 +6,4 @@ document.addEventListener("change", function(event) {
       alert("Maximum file size is 5MB. Please choose a smaller file.");
       image_upload.value = "";
     }
-});
-  
+}); 
