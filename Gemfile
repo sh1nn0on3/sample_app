@@ -21,6 +21,8 @@ gem 'htmlbeautifier'
 gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate'
 gem "rails-i18n"
+gem "sassc"
+
 
 
 

@@ -1,34 +1,43 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
+# I18n.t
 
 en:
   hello: "Hello world"
   login: "Login"
+  account_not_activated : "Account not activated."
+  invalid_email_password: "Invalid email/password combination"
+  check_email_for_activation_link: "Check your email for the activation link."
+  check_email_to_activate_account : "Please check your email to activate your account."
+  profile_updated: "Profile updated"
+  user_deleted : "User deleted"
+  please_log_in : "Please log in."
+  log_in : "Log in"
+  log_out : "Log out"
+  sign_up : "Sign up now!"
+  about : "About"
+  contact : "Contact"
+  AboutPage :
+    title : "About"
+    content : "This is the about page."
+  HelpPage :
+    title : "Help"
+    content : "This is the help page."
+  ContactPage :
+    title : "Contact"
+    content : "This is the contact page."
+  Home :
+    title : "Home"
+    content : "Welcome to the Sample App"
+  Controller :
+    User: 
+      Create : "Welcome to the Sample App!"
+    Session:
+      Danger : 'Invalid email/password combination'
+  Layout :
+    Profile : "Profile"
+    Setting : "Setting"
+    Home : "Home"
+    About : "About"
+    Help : "Help"
+    
+
+
