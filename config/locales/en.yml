@@ -30,3 +30,18 @@ en:
     create : "Micropost created!"
     destroy : "Micropost deleted"
     microposts : "Microposts"
+
+  Controller :
+    User: 
+      Create : "Welcome to the Sample App!"
+    Session:
+      Danger : 'Invalid email/password combination'
+  Layout :
+    Profile : "Profile"
+    Setting : "Setting"
+    Home : "Home"
+    About : "About"
+    Help : "Help"
+    
+
+  
