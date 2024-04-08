@@ -19,7 +19,7 @@ gem 'guard','2.16.2'
 gem 'guard-minitest', '2.4.6'
 gem 'htmlbeautifier'
 gem 'bcrypt', '~> 3.1.7'
-gem "web-console", "4.2.0"
+
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
