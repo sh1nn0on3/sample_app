@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
         message += I18n.t('check_email_for_activation_link')
         flash[:warning] = message
         redirect_to root_url
+
       end
     else
       flash.now[:danger] = I18n.t('invalid_email_password')
@@ -28,4 +29,5 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to root_url, status: :see_other
   end
+
 end
