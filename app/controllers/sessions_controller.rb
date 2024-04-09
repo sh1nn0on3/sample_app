@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
 
       end
     else
-      flash.now[:danger] = I18n.t('invalid_email_password')
+      flash.now[:danger] = I18n.t("Controller.Session.Danger")
       render :new, status: :unprocessable_entity
     end
   end
