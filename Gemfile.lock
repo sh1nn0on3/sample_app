@@ -285,7 +285,6 @@ DEPENDENCIES
   jbuilder
   puma (~> 5.0)
   rails (~> 7.0.8, >= 7.0.8.1)
-  rails-i18n
   sass-rails (= 6.0.0)
   sassc
   selenium-webdriver
