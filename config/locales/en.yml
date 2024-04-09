@@ -2,6 +2,7 @@
 
 en:
   hello: "Hello world"
+  login: "Login"
   account_not_activated : "Account not activated."
   invalid_email_password: "Invalid email/password combination"
   check_email_for_activation_link: "Check your email for the activation link."
@@ -13,6 +14,7 @@ en:
   log_out : "Log out"
   sign_up : "Sign up now!"
   about : "About"
+  Remember : "Remember me on this computer"
   contact : "Contact"
   AboutPage :
     title : "About"
@@ -37,6 +39,7 @@ en:
     Home : "Home"
     About : "About"
     Help : "Help"
+  
     
 
-  
+
