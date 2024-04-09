@@ -57,8 +57,8 @@ class UsersController < ApplicationController
   end
 
   def followers
+    # @user đã được lấy bởi before_action :set_user
     @title = "Followers"
-    @user  = User.find(params[:id])
     @users = @user.followers.paginate(page: params[:page])
     render 'show_follow', status: :unprocessable_entity
   end
