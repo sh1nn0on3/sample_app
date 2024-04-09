@@ -1,0 +1,9 @@
+defaults: &defaults
+  validation : 
+    VALID_EMAIL_REGEX: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+    name :
+      maximum : 50
+    email :
+      maximum : 255
+
+
