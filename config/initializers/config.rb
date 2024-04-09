@@ -65,5 +65,4 @@ Config.setup do |config|
     #
     # config.file_name = 'settings'
     # config.dir_name = 'settings'
-  end
-  
+end
