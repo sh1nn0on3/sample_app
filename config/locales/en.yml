@@ -2,6 +2,7 @@
 
 en:
   hello: "Hello world"
+  login: "Login"
   account_not_activated : "Account not activated."
   invalid_email_password: "Invalid email/password combination"
   check_email_for_activation_link: "Check your email for the activation link."
@@ -13,6 +14,7 @@ en:
   log_out : "Log out"
   sign_up : "Sign up now!"
   about : "About"
+  Remember : "Remember me on this computer"
   contact : "Contact"
   AboutPage :
     title : "About"
@@ -26,8 +28,22 @@ en:
   Home :
     title : "Home"
     content : "Welcome to the Sample App"
-  microposts :
+  Controller :
+    User: 
+      Create : "Welcome to the Sample App!"
+    Session:
+      Danger : 'Invalid email/password combination'
+  Layout :
+    Profile : "Profile"
+    Setting : "Setting"
+    Home : "Home"
+    About : "About"
+    Help : "Help"
+   microposts :
     create : "Micropost created!"
     destroy : "Micropost deleted"
     microposts : "Microposts"
+  
+    
+
 

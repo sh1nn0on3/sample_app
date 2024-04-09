@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
       end
     else
       flash.now[:danger] = I18n.t('invalid_email_password')
-      render 'new', status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -30,5 +30,4 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to root_url, status: :see_other
   end
-
 end
