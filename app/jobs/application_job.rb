@@ -1,15 +1,7 @@
-class AccountActivationsController < ApplicationController
+class ApplicationJob < ActiveJob::Base
+  # Automatically retry jobs that encountered a deadlock
+  # retry_on ActiveRecord::Deadlocked
 
-  def edit
-    user = User.find_by(email: params[:email])
-    if user && !user.activated? && user.authenticated?(:activation, params[:id])
-      user.activate
-      log_in user
-      flash[:success] = "Account activated!"
-      redirect_to user
-    else
-      flash[:danger] = "Invalid activation link"
-      redirect_to root_url
-    end
-  end
+  # Most jobs are safe to ignore if the underlying records are no longer available
+  # discard_on ActiveJob::DeserializationError
 end
