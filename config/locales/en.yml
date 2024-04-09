@@ -13,6 +13,7 @@ en:
   log_out : "Log out"
   sign_up : "Sign up now!"
   about : "About"
+  Remember : "Remember me on this computer"
   contact : "Contact"
   AboutPage :
     title : "About"
@@ -37,6 +38,7 @@ en:
     Home : "Home"
     About : "About"
     Help : "Help"
+  
     
 
   
