@@ -16,5 +16,4 @@ class Micropost < ApplicationRecord
       less_than: 5.megabytes, 
       message: I18n.t('micropost.image_type_validate') 
     }
-    
 end
