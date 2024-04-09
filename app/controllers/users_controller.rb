@@ -4,10 +4,6 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: %i[index edit update destroy]
   before_action :correct_user, only: %i[edit update]
   before_action :admin_user, only: :destroy
-  
-  def set_user
-    @user = User.find_by(id: params[:id])
-  end
 
   def index
     @users = User.select(:name, :email , :created_at).paginate(page: params[:page])
@@ -54,6 +50,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+    def set_user
+      @user = User.find_by(id: params[:id])
+    end
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
