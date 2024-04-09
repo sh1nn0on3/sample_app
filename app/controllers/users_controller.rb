@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   end
 
   def show
-  # @user đã được lấy bởi before_action :set_user
+    # @user đã được lấy bởi before_action :set_user
   end
 
   def new
