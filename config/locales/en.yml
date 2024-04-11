@@ -49,7 +49,3 @@ en:
     messages:
       invalid_image_format: "must be a valid image format"
       image_too_large: "should be less than 5MB"
-  
-    
-
-
