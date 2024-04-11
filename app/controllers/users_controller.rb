@@ -45,7 +45,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).destroy
+    # @user đã được lấy bởi before_action :set_user
     flash[:success] = I18n.t('user_deleted')
     redirect_to users_url, status: :see_other
   end
