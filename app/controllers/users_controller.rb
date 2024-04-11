@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.select(:name, :email , :created_at).paginate(page: params[:page])
+    @users = User.select(:name, :email , :created_at).paginate(page: params[:page]).includes(:microposts)
   end
 
   def show
@@ -51,14 +51,14 @@ class UsersController < ApplicationController
 
   def following
     # @user đã được lấy bởi before_action :set_user
-    @title = "Following"
+    @title = I18n.t('Following') 
     @users = @user.following.paginate(page: params[:page])
     render 'show_follow', status: :unprocessable_entity
   end
 
   def followers
     # @user đã được lấy bởi before_action :set_user
-    @title = "Followers"
+    @title = I18n.t('Followers') 
     @users = @user.followers.paginate(page: params[:page])
     render 'show_follow', status: :unprocessable_entity
   end
