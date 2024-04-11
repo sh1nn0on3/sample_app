@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   def show
-  # @user đã được lấy bởi before_action :set_user
+    # @user đã được lấy bởi before_action :set_user
   end
 
   def new
@@ -24,7 +24,6 @@ class UsersController < ApplicationController
       @user.send_activation_email
       flash[:info] = I18n.t('check_email_to_activate_account')
       redirect_to root_url
-
     else
       render 'new', status: :unprocessable_entity
     end

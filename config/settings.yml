@@ -5,3 +5,7 @@ defaults: &defaults
       maximum : 50
     email :
       maximum : 255
+  content_types:
+    - image/jpeg
+    - image/gif
+    - image/png

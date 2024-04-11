@@ -39,7 +39,13 @@ en:
     Home : "Home"
     About : "About"
     Help : "Help"
-  
-    
-
-
+  microposts :
+    microposts : "Microposts"
+    create_successful: "Micropost created."
+    delete_successful: "Micropost deleted."
+    image_type_validate: "must be a valid image format"
+    image_size_validate: "should be less than 5MB"
+  errors:
+    messages:
+      invalid_image_format: "must be a valid image format"
+      image_too_large: "should be less than 5MB"
