@@ -13,9 +13,8 @@ class SessionsController < ApplicationController
         log_in user
         redirect_to forwarding_url || user
       else
-
         message  = I18n.t('account_not_activated')
-        message += I18n.t('check_email_for_activation_link')
+        message  = I18n.t('check_email_for_activation_link')
         flash[:warning] = message
         redirect_to root_url
 
@@ -30,5 +29,4 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to root_url, status: :see_other
   end
-
 end

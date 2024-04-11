@@ -7,4 +7,3 @@ document.addEventListener("change", function(event) {
       image_upload.value = "";
     }
 });
-  

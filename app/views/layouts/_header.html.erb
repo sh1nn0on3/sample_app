@@ -24,7 +24,6 @@
 
               <li><%= link_to I18n.t("Layout.Profile"), current_user %></li>
               <li><%= link_to I18n.t("Layout.Setting"), edit_user_path(current_user) %></li>
-
               <li class="divider"></li>
               <li>
                 <%= link_to I18n.t("logout"), logout_path,data: { "turbo-method": :delete } %>
@@ -32,7 +31,7 @@
             </ul>
           </li>
         <% else %>
-          <li><%= link_to I18n.t("log_in"), login_path %></li>
+          <li><%= link_to  I18n.t("log_in") , login_path %></li>
         <% end %>
       </ul>
     </nav>

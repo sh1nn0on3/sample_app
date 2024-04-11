@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   def show
-  # @user đã được lấy bởi before_action :set_user
+    # @user đã được lấy bởi before_action :set_user
   end
 
   def new
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
   def update
     # @user đã được lấy bởi before_action :set_user
     if @user.update(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = I18n.t('profile_updated')
       redirect_to @user
     else
       render 'edit', status: :unprocessable_entity
@@ -96,4 +96,3 @@ class UsersController < ApplicationController
       redirect_to(root_url, status: :see_other) unless current_user&.admin?
     end
 end
-
