@@ -47,7 +47,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_08_030800) do
     t.index ["user_id"], name: "index_microposts_on_user_id"
   end
 
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -56,7 +55,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_08_030800) do
     t.string "password_digest"
     t.string "remember_digest"
     t.boolean "admin"
-    t.boolean "activated"
+    t.boolean "activated" , default: false
     t.datetime "activated_at"
     t.string "reset_digest"
     t.datetime "reset_sent_at"

@@ -9,4 +9,3 @@ defaults: &defaults
     - image/jpeg
     - image/gif
     - image/png
-

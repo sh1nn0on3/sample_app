@@ -13,7 +13,6 @@ class SessionsController < ApplicationController
         log_in user
         redirect_to forwarding_url || user
       else
-
         message  = I18n.t('account_not_activated')
         message  = I18n.t('check_email_for_activation_link')
         flash[:warning] = message
@@ -21,8 +20,8 @@ class SessionsController < ApplicationController
 
       end
     else
-      flash.now[:danger] = I18n.t("Controller.Session.Danger")
-      render :new, status: :unprocessable_entity
+      flash.now[:danger] = I18n.t('invalid_email_password')
+      render 'new', status: :unprocessable_entity
     end
   end
 

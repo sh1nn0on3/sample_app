@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   # before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :set_user, only: %i[show edit update destroy]
   before_action :logged_in_user, only: %i[index edit update destroy]
@@ -81,6 +82,4 @@ class UsersController < ApplicationController
       redirect_to(root_url, status: :see_other) unless current_user&.admin?
     end
 end
-
-
 
