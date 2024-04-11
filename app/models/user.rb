@@ -81,9 +81,15 @@ class User < ApplicationRecord
 
   # Returns a user's status feed.
   def feed
-    following_ids = "SELECT followed_id FROM relationships WHERE  follower_id = :user_id"
-    Micropost.where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: id)
-             .includes(:user, image_attachment: :blob).latest
+    # following_ids = "SELECT followed_id FROM relationships WHERE  follower_id = :user_id"
+    # Micropost.where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: id)
+    #          .includes(:user, image_attachment: :blob).latest
+
+    following_ids = get_following_ids_query
+    post = Micropost.arel_table
+    Micropost.where(post[:user_id].in(following_ids)
+      .or(post[:user_id].eq(id)))
+      .includes(:user, image_attachment: :blob).latest
   end
 
   # Follows a user.
@@ -112,5 +118,12 @@ class User < ApplicationRecord
     def create_activation_digest
       self.activation_token  = User.new_token
       self.activation_digest = User.digest(activation_token)
+    end
+
+    #query get following id
+    def get_following_ids_query
+      rela = Relationship.arel_table
+      following_ids = rela.project(rela[:followed_id])
+        .where(rela[:follower_id].eq(id))
     end
 end
