@@ -24,6 +24,7 @@ gem "will_paginate"
 gem "rails-i18n"
 gem "sassc"
 gem "config"
+gem "devise", "~> 4.1"
 
 
 group :development, :test do
