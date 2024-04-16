@@ -28,6 +28,11 @@ en:
   Home :
     title : "Home"
     content : "Welcome to the Sample App"
+  microposts :
+    create : "Micropost created!"
+    destroy : "Micropost deleted"
+    microposts : "Microposts"
+
   Controller :
     User: 
       Create : "Welcome to the Sample App!"
